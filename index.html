@@ -6,105 +6,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Banana Translate Project | Lesson 4</title>
+    <title>Funny Translate</title>
 </head>
 
 <body>
     <nav class="">
-        <span class="brand">Banana Translate</span>
-        <!-- <ul>
-            <li></li>
-        </ul> -->
+        <span class="brand">Funny Translate</span>
     </nav>
     <main class="container-center">
 
-        <textarea name="content" id="textarea-content" cols="50" rows="10" placeholder="Enter Sentence in ENGLISH">
+        <textarea name="content" id="textarea-content" class="in-out-control" cols="20" rows="10"
+            placeholder="Enter Sentence in ENGLISH"></textarea>
 
-    </textarea>
+        <div class="container-fluid">
+            <label for="select-language">Select Language : </label>
 
-        <select name="language" id="select-language">
-            <option value="">--Select fun Language--</option>
-            <option value="Starwars">Starwars</option>
-            <option value="Startrek">Startrek</option>
-            <option value="Got">Got</option>
-            <option value="Elvish">Elvish</option>
-            <option value="All">All</option>
-            <option value="Yoda">Yoda</option>
-            <option value="Pirate">Pirate</option>
-            <option value="Valspeak">Valspeak</option>
-            <option value="Minion">Minion</option>
-            <option value="Ferb-latin">Ferb latin</option>
-            <option value="Pig-latin">Pig latin</option>
-            <option value="Dothraki">Dothraki</option>
-            <option value="Valyrian">Valyrian</option>
-            <option value="Hodor">Hodor</option>
-            <option value="Sindarin">Sindarin</option>
-            <option value="Quenya">Quenya</option>
-            <option value="Orcish">Orcish</option>
-            <option value="Sith">Sith</option>
-            <option value="Cheunh">Cheunh</option>
-            <option value="Gungan">Gungan</option>
-            <option value="Mandalorian">Mandalorian</option>
-            <option value="Huttese">Huttese</option>
-            <option value="Chef">Chef</option>
-            <option value="Catalan">Catalan</option>
-            <option value="Oldenglish">Oldenglish</option>
-            <option value="Shakespeare">Shakespeare</option>
-            <option value="Vulcan">Vulcan</option>
-            <option value="Klingon">Klingon</option>
-            <option value="Romulan">Romulan</option>
-            <option value="Dovahzul">Dovahzul</option>
-            <option value="Thuum">Thuum</option>
-            <option value="Aldmeris">Aldmeris</option>
-            <option value="Groot">Groot</option>
-            <option value="Jive">Jive</option>
-            <option value="Ebonics">Ebonics</option>
-            <option value="Dolan">Dolan</option>
-            <option value="Fudd">Fudd</option>
-            <option value="Kraut">Kraut</option>
-            <option value="Wow">Wow</option>
-            <option value="Cockney">Cockney</option>
-            <option value="Norfolk">Norfolk</option>
-            <option value="Morse">Morse</option>
-            <option value="Us2uk">Us2uk</option>
-            <option value="Uk2us">Uk2us</option>
-            <option value="Leetspeak">Leetspeak</option>
-            <option value="Brooklyn">Brooklyn</option>
-            <option value="Ermahgerd">Ermahgerd</option>
-            <option value="Australian">Australian</option>
-            <option value="Boston">Boston</option>
-            <option value="Austrian">Austrian</option>
-            <option value="Article_rewrite">Article_rewrite</option>
-            <option value="Braille">Braille</option>
-            <option value="Numbers">Numbers</option>
-            <option value="Emoji">Emoji</option>
-            <option value="Doge">Doge</option>
-            <option value="Navi">Navi</option>
-            <option value="Southern-accent">Southern accent</option>
-            <option value="Ubbi-dubbi">Ubbi dubbi</option>
-            <option value="Inflationary-english">Inflationary english</option>
-            <option value="George-bush-dubya">George bush dubya</option>
-            <option value="Post-modern">Post modern</option>
-            <option value="Ayleidoon">Ayleidoon</option>
-            <option value="Redneck">Redneck</option>
-            <option value="Roman-numerals">Roman numerals</option>
-            <option value="Asian-accent">Asian accent</option>
-            <option value="Russian-accent">Russian accent</option>
-            <option value="English-contraction">English contraction</option>
-            <option value="Irish">Irish</option>
-            <option value="British">British</option>
-            <option value="German-accent">German accent</option>
-            <option value="Draconic">Draconic</option>
-            <option value="Enderman">Enderman</option>
-            <option value="Wheel-of-time-old-tongue">Wheel of time old tongue</option>
-        </select>
-        <button id="btn-translate">
-            Translate
-        </button>
-
-        <div class="div-output" id="div-output">
-
+            <select name="language" class="btn" id="select-language">
+                <option value="">--Select fun Language--</option>
+                <option value="Yoda">Yoda</option>
+                <option value="Pirate">Pirate</option>
+                <option value="Valspeak">Valspeak</option>
+                <option value="Minion" selected>Minion</option>
+                <option value="Ferb-latin">Ferb latin</option>
+                <option value="Pig-latin">Pig latin</option>
+                <option value="Dothraki">Dothraki</option>
+                <option value="Valyrian">Valyrian</option>
+                <option value="Hodor">Hodor</option>
+                <option value="Sindarin">Sindarin</option>
+                <option value="Quenya">Quenya</option>
+                <option value="Orcish">Orcish</option>
+                <option value="Sith">Sith</option>
+                <option value="Cheunh">Cheunh</option>
+                <option value="Gungan">Gungan</option>
+                <option value="Mandalorian">Mandalorian</option>
+                <option value="Huttese">Huttese</option>
+                <option value="Chef">Chef</option>
+                <option value="Catalan">Catalan</option>
+                <option value="Oldenglish">Oldenglish</option>
+                <option value="Shakespeare">Shakespeare</option>
+                <option value="Vulcan">Vulcan</option>
+                <option value="Klingon">Klingon</option>
+                <option value="Romulan">Romulan</option>
+                <option value="Dovahzul">Dovahzul</option>
+                <option value="Thuum">Thuum</option>
+                <option value="Aldmeris">Aldmeris</option>
+                <option value="Groot">Groot</option>
+                <option value="Jive">Jive</option>
+                <option value="Ebonics">Ebonics</option>
+                <option value="Dolan">Dolan</option>
+                <option value="Fudd">Fudd</option>
+                <option value="Kraut">Kraut</option>
+                <option value="Wow">Wow</option>
+                <option value="Cockney">Cockney</option>
+                <option value="Norfolk">Norfolk</option>
+                <option value="Morse">Morse</option>
+                <option value="Us2uk">Us2uk</option>
+                <option value="Uk2us">Uk2us</option>
+                <option value="Leetspeak">Leetspeak</option>
+                <option value="Brooklyn">Brooklyn</option>
+                <option value="Ermahgerd">Ermahgerd</option>
+                <option value="Australian">Australian</option>
+                <option value="Boston">Boston</option>
+                <option value="Austrian">Austrian</option>
+                <option value="Article_rewrite">Article_rewrite</option>
+                <option value="Braille">Braille</option>
+                <option value="Numbers">Numbers</option>
+                <option value="Emoji">Emoji</option>
+                <option value="Doge">Doge</option>
+                <option value="Navi">Navi</option>
+                <option value="Southern-accent">Southern accent</option>
+                <option value="Ubbi-dubbi">Ubbi dubbi</option>
+                <option value="Inflationary-english">Inflationary english</option>
+                <option value="George-bush-dubya">George bush dubya</option>
+                <option value="Post-modern">Post modern</option>
+                <option value="Ayleidoon">Ayleidoon</option>
+                <option value="Redneck">Redneck</option>
+                <option value="Roman-numerals">Roman numerals</option>
+                <option value="Asian-accent">Asian accent</option>
+                <option value="Russian-accent">Russian accent</option>
+                <option value="English-contraction">English contraction</option>
+                <option value="Irish">Irish</option>
+                <option value="British">British</option>
+                <option value="German-accent">German accent</option>
+                <option value="Draconic">Draconic</option>
+                <option value="Enderman">Enderman</option>
+                <option value="Wheel-of-time-old-tongue">Wheel of time old tongue</option>
+            </select> <br>
+            <button id="btn-translate" class="btn btn-primary">
+                Translate
+            </button>
         </div>
+        <div class="div-output in-out-control" id="div-output">
+        </div>
+        <small><a href="https://funtranslations.com/">Know More</a></small>
     </main>
     <script src="app.js"></script>
 </body>
