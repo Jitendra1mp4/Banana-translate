@@ -1,22 +1,30 @@
 const textInput = document.querySelector("#textarea-content");
 const btnTranslate = document.querySelector("#btn-translate");
 const divOutput = document.querySelector("#div-output");
-
-let urlCreator = (inputText) => {
-  const url = "https://api.funtranslations.com/translate/yoda.json?";
-  return url + "text=" + inputText;
+const selectLanguage = document.querySelector("#select-language");
+const url = "https://api.funtranslations.com/translate/";
+let urlCreator = (lang, inputText) => {
+  return url + lang + ".json?text=" + inputText;
 };
 
-let getTranslated = (apiUrl) => {
-  let promise = fetch(apiUrl);
-  promise
-    .then((Response) => Response.json())
-    .then((json) => {
-      return json.contents.translate;
-    }); //.catch () => (console.warn("Problem found!"))
+let setTranslatedText = (apiUrl) => {
+  let p = fetch(apiUrl);
+  p.then((resolve) => resolve.json())
+    .then((json) => (divOutput.innerText = json.contents.translated))
+    .catch((er) => {
+      divOutput.innerText = "🤦‍♂️Sorrrrry! there is some problem with server."
+      console.error("Error occurred : " + er) ;
+      // console.log(json) ;
+  });
 };
 
 btnTranslate.addEventListener("click", () => {
-  let apiUrl = urlCreator(textInput.value);
-  divOutput.innerText = getTranslated(apiUrl) ;
+  let translation = selectLanguage.value.toString().trim();
+  let inputT = textInput.value.toString().trim();
+  if (inputT !== "") {
+    let apiUrl = urlCreator(translation, inputT);
+    setTranslatedText(apiUrl);
+  } else {
+    divOutput.innerText = "Sorry! You haven't enter any sentence.";
+  }
 });
