@@ -1,77 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 :root {
-  --color-primary: rgb(151, 5, 255);
-  --color-secondary: rgb(210, 236, 255);
-  --standard-width : 70% ;
+  --color-primary: rgb(0, 162, 255);
+  --color-secondary: rgb(254, 220, 255);
+  --standard-width : 600px ;
+  --standard-min-width : 280px ;
   }
 
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-
   font-family: 'Ubuntu', sans-serif;
-
 }
 
-nav {
-  background-color: var(--color-primary);
-  max-width: 800px;
-  margin:auto;
-  padding: 2rem;
+body{
+  width: 100vw;
+  color : var(--color-primary) ;
 }
-
-.brand {
-  font-size: larger;
-  font-weight: bold;
-  color: var(--color-secondary);
+main {
+  width: 80vw;
+  min-height: 600px;
+  max-width: var(--standard-width);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: .5rem auto;
+  justify-content: space-between;
 }
-
-.container-center {
-  max-width: 650px;
-  margin: auto;
+h1{
+  margin: 1rem 0;
+  padding-left: .2em;
+  /* text-align: center; */
 }
-
-.container-fluid{
-  padding: 1rem;
+label,button{
+  min-width: var(--standard-min-width);
+  max-width:fit-content;
 }
-
-.in-out-control {
-  display: block;
-  margin: 2rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  width: var(--standard-width);
-  font-size: large;
-}
-.btn, label {
-  display: inline;
-  margin: 0.5rem 1.4rem;
-  padding:0.5rem;
-  border-radius: 0.5rem;
-  font-weight: bold;
-}
-
 label{
-  border-bottom: 1px solid var(--color-primary);
-  border-radius: 0px;
-  font-weight: 400;
-  margin-bottom: 0.4rem;
+  overflow: visible;
+  margin-top: 1rem;
+}
+select, button{
+  display: block;
+  margin: .8rem 0;
+  padding: .5em;
+  min-width: 200px;
+}
+textarea, .div-output,.control-container{
+  width: 90% ;
+  display: block;
+  border: 1px solid black;
+  height: 150px ;
+  border-radius: 3px;
+  padding: 1rem;
 }
 
-#select-language {
-  color: var(--color-primary);
-  border-color: blueviolet;
-}
-#btn-translate{
-  background-color: var(--color-primary);
-  color: var(--color-secondary);
-  border: 2px solid rgb(151, 5, 255);
-  width : 10rem ;
-  margin: 0.4rem 1.5rem ;
-}
-.div-output {
-  border: 2px solid gray;
-  height: 200px;
+.control-container{
+  border: unset;
+  padding: unset;
+  padding-top: 1em;
 }

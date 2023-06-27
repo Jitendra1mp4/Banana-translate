@@ -10,19 +10,16 @@
 </head>
 
 <body>
-    <nav class="">
-        <span class="brand">Funny Translate</span>
-    </nav>
-    <main class="container-center">
 
-        <textarea name="content" id="textarea-content" class="in-out-control" cols="20" rows="10"
+    <main class="center">
+        <h1>Fun Translations</h1>
+        <textarea name="content" id="textarea-content" class="" cols="20" rows="10"
             placeholder="Enter Sentence in ENGLISH"></textarea>
+<div class="control-container">
 
-        <div class="container-fluid">
-            <label for="select-language">Select Language : </label>
-
-            <select name="language" class="btn" id="select-language">
-                <option value="">--Select fun Language--</option>
+    <label for="select-language">Select Language :
+        <select name="language" class="btn" id="select-language">
+            <option value="">--Select fun Language--</option>
                 <option value="Yoda">Yoda</option>
                 <option value="Pirate">Pirate</option>
                 <option value="Valspeak">Valspeak</option>
@@ -53,6 +50,7 @@
                 <option value="Groot">Groot</option>
                 <option value="Jive">Jive</option>
                 <option value="Ebonics">Ebonics</option>
+            
                 <option value="Dolan">Dolan</option>
                 <option value="Fudd">Fudd</option>
                 <option value="Kraut">Kraut</option>
@@ -91,12 +89,13 @@
                 <option value="Draconic">Draconic</option>
                 <option value="Enderman">Enderman</option>
                 <option value="Wheel-of-time-old-tongue">Wheel of time old tongue</option>
-            </select> <br>
-            <button id="btn-translate" class="btn btn-primary">
-                Translate
-            </button>
-        </div>
-        <div class="div-output in-out-control" id="div-output">
+            </select>
+        </label>
+        <button id="btn-translate" class="btn btn-primary">
+            Translate
+        </button>
+    </div>
+        <div class="div-output" id="div-output">
         </div>
         <small><a href="https://funtranslations.com/">Know More</a></small>
     </main>
