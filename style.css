@@ -15,10 +15,12 @@
   font-family: 'Ubuntu', sans-serif;
 }
 
-body{
+body {
   width: 100vw;
   background: linear-gradient(45deg,rgb(22, 10, 55),rgb(14, 0, 0));
-  color : var(--color-primary) ;
+  color: var(--color-primary);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 main {
   width: 80vw;
